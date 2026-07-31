@@ -35,8 +35,6 @@ class CardGameTrackerApp extends StatelessWidget {
             seedColor: const Color(0xFFD0BCFF),
             brightness: Brightness.dark,
             surface: const Color(0xFF141218),
-            surfaceContainer: const Color(0xFF211F26),
-            surfaceContainerHigh: const Color(0xFF2B2930),
           ),
           textTheme: GoogleFonts.plusJakartaSansTextTheme(
             ThemeData.dark().textTheme,

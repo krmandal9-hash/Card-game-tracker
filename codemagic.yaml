@@ -5,12 +5,17 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       flutter: stable
+      java: 17
     scripts:
-      - name: Generate Flutter Android platform files
-        script: flutter create . --platforms android --org com.example
+      - name: Generate complete native Android project
+        script: |
+          flutter create . --force --platforms android --org com.example.cardgametracker
       - name: Get Flutter packages
-        script: flutter packages pub get
+        script: |
+          flutter pub get
       - name: Build Android APK
-        script: flutter build apk --release
+        script: |
+          flutter build apk --release --no-tree-shake-icons
     artifacts:
+      - build/app/outputs/flutter-apk/*.apk
       - build/**/outputs/**/*.apk
