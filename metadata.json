@@ -1,0 +1,6 @@
+{
+  "name": "Card Game Tracker",
+  "description": "Material 3 card game score and balance tracker for 5 players with Double Price stakes, game history, offline storage, and Flutter project reference.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
