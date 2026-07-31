@@ -7,9 +7,11 @@ workflows:
       flutter: stable
       java: 17
     scripts:
-      - name: Generate complete native Android project
+      - name: Ensure Flutter Android configuration
         script: |
-          flutter create . --force --platforms android --org com.example.cardgametracker
+          if [ ! -d "android" ]; then
+            flutter create . --force --platforms android --org com.example.cardgametracker
+          fi
       - name: Get Flutter packages
         script: |
           flutter pub get
